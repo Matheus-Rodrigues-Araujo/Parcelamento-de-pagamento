@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root{
+    font-size: 8px;
+    gap: 8px;
+    font-family: Poppins, sans-serif;
+    --light-purple: rgb(202, 38, 202);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 2rem; */
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* PAGAMENTO */
+.pagamento{
+    text-align: center;
+    font-size: 2.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    background-color: white;
+    border: 20px solid
+    rgb(209, 19, 123);
+    
+    /* purple; */
+    color: black;
+    font-weight: 700;
+}
+
+.pagamento header{
+    background-color: purple;
+    /* background-color: rgb(209, 19, 123); */
+    color: white;
+    font-weight: 700;
+}
+
+
+.label-produto, .label-parcelas{
+    display: flex;
+    margin: 5px 0;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 300px;
+    margin-inline: auto;
+}
+
+.input-style{
+    padding: 5px;
+    border-radius: .3em;
+}
+
+.submit-btn{
+    width: 175px;
+    padding: 10px;
+    margin-inline: auto;
+    font-size: 2.2rem;
+    background-color: var(--light-purple);
+    border: none;
+    border-radius: .3em;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+}
+
+.submit-btn:hover{
+    background-image: linear-gradient();
+    background-image: linear-gradient(to right, purple, rgb(94, 7, 94));
+    box-shadow: 0px 2px 2px  2px rgb(143, 139, 139);
+}
+
+/* FATURAS */
+.faturas{
+    font-size: 2.5rem;
+    /* background-color: dodgerblue; */
+    border: 20px solid
+    dodgerblue;
+}
+
+.faturas header{
+    background-color: rgb(6, 41, 105);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+.tabela{
+    width: 80%;
+    padding: 5px;
+    margin-inline: auto;
+    margin-top: 5px;
+}
+
+.tabela,tr,
+th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .pagamento{
+        border: 5px solid rgb(209, 19, 123);
+        /* gap: 0; */
+    }
+}
