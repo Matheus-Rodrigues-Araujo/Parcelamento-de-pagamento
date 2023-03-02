@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Parcelamento</title>
 </head>
 <body>
@@ -20,11 +19,6 @@
                     name="input-produto">
                 </label>
                 <datalist id="produtos" >
-                    <option value="Notebook">
-                    <option value="Smartphone">
-                    <option value="PS5">
-                    <option value="XBOX">
-                    <option value="Iphone">
                 </datalist>
             </div>
             <div class="parcelas-conteiner" >
@@ -32,12 +26,12 @@
                     <input list="parcelas" id="input-parcela" class="input-style">
                 </label>
                 <datalist id="parcelas">
-                    <option value="1x">
-                    <option value="2x">
-                    <option value="3x">
-                    <option value="4x">
-                    <option value="5x">
-                    <option value="6x com 10% de juros">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
                 </datalist>
             </div>
             <button class="submit-btn">Enviar</button>
@@ -46,96 +40,9 @@
             <header>
                 <h1>Faturas</h1>
             </header>
-            <table class="tabela">
-                <tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr>
-
-                <tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr>
-
-                <tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr><tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr><tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr><tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr><tr class="linha" >
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-
-                <tr class="linha">
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                </tr>
+            <p id="nome-produto" >PS5</p>
+            <table class="tabela" id="tabela">
+                <!-- <tr class="linha" > -->
             </table>
         </div>
 

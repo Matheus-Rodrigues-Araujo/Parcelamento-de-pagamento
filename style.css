@@ -100,6 +100,9 @@
     margin-top: 5px;
 }
 
+#nome-produto{
+    text-align: center;
+}
 .tabela,tr,
 th,td {
     border: 1px solid black;
