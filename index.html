@@ -14,11 +14,19 @@
                 <h1>PAGAMENTO</h1>
             </header>
             <div class="produtos-conteiner">
-                <label for="input-produto" class="label-produto">Escolha o produto:
-                    <input list="produtos" id="input-produto" class="input-style"
+                <label for="preco" class="label-produto">Nome:
+                    <input type="text" id="produto" class="input-style" name="produto">
+                </label>
+
+                <label for="preco" class="label-produto">Preço:
+                    <input list="precos" id="preco" class="input-style"
                     name="input-produto">
                 </label>
-                <datalist id="produtos" >
+                <datalist id="precos" >
+                    <option value="3500"></option>
+                    <option value="5500"></option>
+                    <option value="6500"></option>
+                    <option value="7500"></option>
                 </datalist>
             </div>
             <div class="parcelas-conteiner" >
@@ -34,7 +42,7 @@
                     <option value="6">
                 </datalist>
             </div>
-            <button class="submit-btn">Enviar</button>
+            <button class="submit-btn" id="submit">Enviar</button>
         </div>
         <div class="faturas">
             <header>
