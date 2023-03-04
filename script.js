@@ -15,7 +15,7 @@ const criarFatura = (quantidadeParcelas, valorTotal, nome) =>{
     
     let parcela;
 
-    if(quantidadeParcelas >= 5){
+    if(quantidadeParcelas > 5){
         let juro = (valorTotal * 10)/100
         valorTotal = Number(valorTotal) + Number(juro)
         parcela = valorTotal/quantidadeParcelas
