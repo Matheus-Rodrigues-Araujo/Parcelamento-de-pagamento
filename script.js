@@ -8,7 +8,7 @@ const tabelaFaturas = document.getElementById('tabela-faturas')
 
 const produtoSelecionado = {nome:"", preco:null, parcelas: null}
 
-const criarTabela = (quantidadeParcelas, valorTotal, nome) =>{
+const criarFatura = (quantidadeParcelas, valorTotal, nome) =>{
     nomeProduto.innerHTML = ""
     tabelaFaturas.innerHTML = ""
     totalPagamento.innerHTML = ""
@@ -20,12 +20,13 @@ const criarTabela = (quantidadeParcelas, valorTotal, nome) =>{
         valorTotal = Number(valorTotal) + Number(juro)
         parcela = valorTotal/quantidadeParcelas
         
-        totalPagamento.innerHTML = `PAGAMENTO: R$ ${valorTotal}.<p>10% de juros incluído!</p>`
+        totalPagamento.innerHTML = `PAGAMENTO: R$ ${valorTotal}.<p class="juros" >10% de juros incluído!</p>`
         nomeProduto.innerHTML = nome
         
         for(let i=1; i<=quantidadeParcelas; i++){
             const tr = document.createElement('tr')
             const tdParcela = document.createElement('td')
+            tdParcela.className = "td-parcela"
             const tdValor = document.createElement('td')
             tdParcela.innerText = `${i}ª Parcela`
             tdValor.innerText = `R$ ${parcela.toFixed(2)}`
@@ -42,6 +43,7 @@ const criarTabela = (quantidadeParcelas, valorTotal, nome) =>{
     for(let i=1; i<=quantidadeParcelas; i++){
         const tr = document.createElement('tr')
         const tdParcela = document.createElement('td')
+        tdParcela.className = "td-parcela"
         const tdValor = document.createElement('td')
         tdParcela.innerText = `${i}ª Parcela`
         tdValor.innerText = `R$ ${parcela.toFixed(2)}`
@@ -65,19 +67,6 @@ inputParcela.addEventListener('change', (e)=>{
 submitBtn.addEventListener('click', ()=>{
     const {nome, preco, parcelas} = produtoSelecionado
     if(nome && preco && parcelas){
-        criarTabela(parcelas, preco, nome)
+        criarFatura(parcelas, preco, nome)
     }
 })
-// inputParcela.addEventListener('change', (e)=>{
-//     if(produtoSelecionado){
-//         const valor = Number(e.target.value)
-//         const parcela = produtoSelecionado.preco/valor
-//         if(valor === 6){
-//             let parcelaComJuros = parcela * 10/100
-//             parcela = parcela + parcelaComJuros
-//             console.log(`Juros: ${valor}x de R$ ${Math.floor(parcela)},00`)
-//         }else{
-//             console.log(`${valor}x de R$ ${Math.floor(parcela)},00`)
-//         }
-//     }
-// })

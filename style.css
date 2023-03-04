@@ -31,8 +31,6 @@
     background-color: white;
     border: 20px solid
     rgb(209, 19, 123);
-    
-    /* purple; */
     color: black;
     font-weight: 700;
 }
@@ -110,6 +108,12 @@ color: rgb(15, 199, 15);
 font-weight: 700;
 }
 
+.juros{
+    color: red;
+    font-weight: 700;
+    text-align: center;
+}
+
 .tabela,tr,
 th,td {
     border: 1px solid black;
@@ -118,6 +122,12 @@ th,td {
 
 td{
     text-align: center;
+}
+
+.td-header{
+    background-color: rgb(43, 42, 42);
+    color: white;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 800px) {
