@@ -2,9 +2,53 @@ const inputProduto = document.getElementById('produto')
 const inputPreco = document.getElementById('preco')
 const inputParcela = document.getElementById('input-parcela')
 const submitBtn = document.getElementById('submit')
-const tabela = document.getElementById('tabela')
+const nomeProduto = document.getElementById('nome-produto')
+const totalPagamento = document.getElementById('total-pagamento')
+const tabelaFaturas = document.getElementById('tabela-faturas')
 
 const produtoSelecionado = {nome:"", preco:null, parcelas: null}
+
+const criarTabela = (quantidadeParcelas, valorTotal, nome) =>{
+    nomeProduto.innerHTML = ""
+    tabelaFaturas.innerHTML = ""
+    totalPagamento.innerHTML = ""
+    
+    let parcela;
+
+    if(quantidadeParcelas >= 6){
+        let juro = (valorTotal * 10)/100
+        valorTotal = Number(valorTotal) + Number(juro)
+        parcela = valorTotal/quantidadeParcelas
+        
+        totalPagamento.innerHTML = `PAGAMENTO: R$ ${valorTotal}.<p>10% de juros incluído!</p>`
+        nomeProduto.innerHTML = nome
+        
+        for(let i=1; i<=quantidadeParcelas; i++){
+            const tr = document.createElement('tr')
+            const tdParcela = document.createElement('td')
+            const tdValor = document.createElement('td')
+            tdParcela.innerText = `${i}ª Parcela`
+            tdValor.innerText = `R$ ${parcela.toFixed(2)}`
+            tr.append(tdParcela, tdValor)
+            tabelaFaturas.appendChild(tr)
+        }
+
+    }else{
+
+    parcela = valorTotal/quantidadeParcelas
+    nomeProduto.innerHTML = nome
+    totalPagamento.innerHTML = `PAGAMENTO: R$ ${valorTotal}`
+
+    for(let i=1; i<=quantidadeParcelas; i++){
+        const tr = document.createElement('tr')
+        const tdParcela = document.createElement('td')
+        const tdValor = document.createElement('td')
+        tdParcela.innerText = `${i}ª Parcela`
+        tdValor.innerText = `R$ ${parcela.toFixed(2)}`
+        tr.append(tdParcela, tdValor)
+        tabelaFaturas.appendChild(tr)
+    }}
+}
 
 inputProduto.addEventListener('change', (e)=>{
     produtoSelecionado.nome = e.target.value
@@ -21,7 +65,7 @@ inputParcela.addEventListener('change', (e)=>{
 submitBtn.addEventListener('click', ()=>{
     const {nome, preco, parcelas} = produtoSelecionado
     if(nome && preco && parcelas){
-        console.log(produtoSelecionado)
+        criarTabela(parcelas, preco, nome)
     }
 })
 // inputParcela.addEventListener('change', (e)=>{

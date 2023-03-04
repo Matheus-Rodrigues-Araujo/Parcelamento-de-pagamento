@@ -103,6 +103,13 @@
 #nome-produto{
     text-align: center;
 }
+
+#total-pagamento{
+text-align: center;
+color: rgb(15, 199, 15);
+font-weight: 700;
+}
+
 .tabela,tr,
 th,td {
     border: 1px solid black;
