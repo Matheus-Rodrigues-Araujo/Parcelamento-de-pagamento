@@ -100,6 +100,9 @@
 
 #nome-produto{
     text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 #total-pagamento{
@@ -116,15 +119,16 @@ font-weight: 700;
 
 .tabela,tr,
 th,td {
-    border: 1px solid black;
+    border: 5px solid black;
     border-collapse: collapse;
+    padding: 3px;
 }
 
 td{
     text-align: center;
 }
 
-.td-header{
+.headers{
     background-color: rgb(43, 42, 42);
     color: white;
     font-weight: 700;
